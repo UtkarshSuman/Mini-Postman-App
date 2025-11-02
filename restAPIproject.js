@@ -3,10 +3,13 @@ import bodyParser from "body-parser";
 import axios from "axios";
 import path from "path";
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
+
 // To make css file working
 app.use(express.static("public")); //this makes /public accessible
-app.set("view engine","ejs");
+app.set("views", "./views");
+app.set("view engine", "ejs");
+
 app.set("views",path.join(__dirname,"views"));
 
 const API_URL = "https://secrets-api.appbrewery.com";
