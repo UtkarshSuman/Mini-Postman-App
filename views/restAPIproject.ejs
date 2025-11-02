@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/style/restAPIproject.css">
+</head>
+<body>
+  <div class="container"> 
+    <div class="outputArea">
+      <p>
+        <%= content %>
+      </p>
+      <form method="POST">
+        <label for="id">ID:</label>
+        <input type="text" id="inputId" name="id">
+        <label for="secret">Secret:</label>
+        <input type="text" name="secret" id="inputSecret">
+        <label for="score">Score:</label>
+        <input type="number" name="score" id="inputScore">
+        <label for="buttons">Route Requests:</label>
+        <input type="submit" id="get" value="GET" formaction="/get-secret">
+        <input type="submit" id="post" value="POST" formaction="/post-secret">
+        <input type="submit" id="put" value="PUT" formaction="/put-secret">
+        <input type="submit" id="patch" value="PATCH" formaction="/patch-secret">
+        <input type="submit" id="delete" value="DELETE" formaction="/delete-secret">
+      </form>
+    </div>
+  </div>
+<script src="restAPIproject.js" ></script> 
+</body>
+</html>
